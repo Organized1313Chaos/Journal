@@ -4,3 +4,5 @@
    dsiplay all branches without commit message
 3. git branch -a -vv <br>
    dsiplay all branches with hash and commit message
+4. git remote add repo-name <br>
+   Connect the new repository to an existing remote repository that has no data.
