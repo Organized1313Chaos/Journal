@@ -6,3 +6,5 @@
    dsiplay all branches with hash and commit message
 4. git remote add repo-name <br>
    Connect the new repository to an existing remote repository that has no data.
+5. git remote remove repo-name <br>
+   remove existing remote repository.
