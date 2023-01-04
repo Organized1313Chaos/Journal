@@ -19,6 +19,7 @@ from . import views
 
 #path name is used in django template to render the url view
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('',views.index ,name='index'),
+    path('admin/', admin.site.urls),
+    path('removepunc/',views.removepunc ,name='removepunc'),
 ]
