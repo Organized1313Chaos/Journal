@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 # Hello world API
 def index(request):
+    context = {'name': 'Chaos', 'type': 'Organized'}
     
-    #HttpResponse can return A String, HTML content as well
-    return render(request, 'index.html')
+    #render returns a template and context dictionary
+    return render(request, 'index.html', context)
