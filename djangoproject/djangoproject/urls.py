@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+#path name is used in django template to render the url view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index ,name='index'),
