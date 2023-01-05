@@ -1,5 +1,17 @@
 ###git Commands
 
+**Basic**
+1. `git init`
+   initialize the git repository
+2. `git log`
+   displays all commits
+3. `git reset --soft <commit sh>`
+   go to a specific commit message and restores files and local history
+
+   - soft reset: move your HEAD to where they were , but leave your local files
+   - hard reset: local code and local history be just like it was at that commit
+   
+
 **Merge Two Repositories**
 
 1. git remote -v
