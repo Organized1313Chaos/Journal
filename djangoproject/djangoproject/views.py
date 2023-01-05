@@ -7,4 +7,5 @@ def index(request):
     return render(request, 'index.html')
 
 def removepunc(request):
-    return HttpResponse("removing punctuations...")
+    text = request.GET.get('text', 'default')
+    return HttpResponse("removing punctuations..."+f"===========> {text}")
