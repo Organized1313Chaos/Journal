@@ -1,0 +1,1 @@
+1. Buttons must be inside the forms for them to work on "action" event.
