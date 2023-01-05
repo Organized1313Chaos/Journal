@@ -54,7 +54,12 @@ ___
 - Block Quote with other elements
   > - Profits were higher than ever.
 
+___
 
+**Character Formatting**
+- Symbol: `^a^`
+  This is 2^32^ superscript tag.
+  html: `2<sup>32<\sup>`
 
 **References**:
 ___
