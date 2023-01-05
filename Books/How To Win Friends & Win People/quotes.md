@@ -1,0 +1,1 @@
+- The only way to get the best of an argument is to avoid it. 
