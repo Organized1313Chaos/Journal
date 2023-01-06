@@ -1,5 +1,5 @@
 Interpretation: On clicking submit button
-- Hit the api '/removepunc/' with params "text: {{text}}"
+- Hit the api "/removepunc/" with params "text: {{text}}"
 
 ```
 <form action='/removepunc/' method='get'>
@@ -8,3 +8,5 @@ Interpretation: On clicking submit button
         <button type='submit'>Analyze Text</button>
 </form>
 ```
+- `<p>` tag doesn't retain new line characters
+- `<pre>` tag is used to retain new line characters
