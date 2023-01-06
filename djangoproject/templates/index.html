@@ -9,13 +9,20 @@
 <body>
 
     Enter your text below.
-    <form action='/removepunc/' method='get'>
+    <form action='/analyze/' method='get'>
         <textarea name='text' style='width: 470px; height: 350px;'></textarea>
         <br>
-        <button type='submit'>Analyze Text</button>
+
+        <input type="checkbox" name="punctuation"> Remove Punctuations<br> 
+        <button type='submit'>Analyze</button>
     </form>
 
+    <br>
+    <br>
+    <br>
+    <p>Navigation Links:</p>
+    <a href={{ google }}> Google </a><br>
+    <a href={{ leetcode }}> Leetcode </a>
     
-
 </body>
 </html>
