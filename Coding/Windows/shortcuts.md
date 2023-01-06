@@ -1,0 +1,2 @@
+- print working directory: `cd`
+- go to a specific path: `cd path`
