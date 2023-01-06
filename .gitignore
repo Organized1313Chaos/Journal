@@ -2,3 +2,4 @@ venv
 *pycache*
 *db.sqlite3*
 *launch.json
+*.env

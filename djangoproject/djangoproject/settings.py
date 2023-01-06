@@ -57,7 +57,7 @@ ROOT_URLCONF = 'djangoproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [f'D:\Home\django\\djangoproject\\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
