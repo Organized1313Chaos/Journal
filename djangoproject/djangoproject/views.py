@@ -12,8 +12,8 @@ def index(request):
     return render(request, 'index.html', params)
 
 def analyze(request):
-    text = request.GET.get('text', 'default')
-    punctuation = request.GET.get('punctuation', 'off')
+    text = request.POST.get('text', 'default')
+    punctuation = request.POST.get('punctuation', 'off')
     
     if punctuation=='on':
         text = re.sub(r'[^\w\s]', '',  text)

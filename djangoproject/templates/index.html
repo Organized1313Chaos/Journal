@@ -9,7 +9,8 @@
 <body>
 
     Enter your text below.
-    <form action='/analyze/' method='get'>
+    <form action='/analyze/' method='post'>
+        {% csrf_token %}
         <textarea name='text' style='width: 470px; height: 350px;'></textarea>
         <br>
 
