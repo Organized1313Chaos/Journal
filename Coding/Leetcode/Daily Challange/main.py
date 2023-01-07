@@ -1,27 +1,27 @@
 '''
-Leetcode Daily Challange 
-Date: January 6, 2023
-Problem Number: 1833
-Name: Maximum Ice Cream Bars
+Leetcode Competition: Biweekly Contest
+Date: January 7, 2023
+
+Problem Number: 6289
+Name: Find Xor-Beauty of Array
 '''
 
 '''
-Successful Approach 1: Sort and pick minimum valued coin
+Failed Approach 1: Brute Force
 '''
 class Solution:
-    def maxIceCream(self, costs, coins: int) -> int:
-        costs = sorted(costs)
-        count = 0
-        for i in costs:
-            coins -= i
-            if coins<0:
-                return count
-            count+=1
+    def xorBeauty(self, nums) -> int:
+        triplets = []
+        total = 0
+        for i in nums:
+            for j in nums:
+                for k in nums:
+                    triplets.append( (i,j,k) )
+                    total = total ^  ((i | j) & k)
+                    
+        return total       
             
-        return count
-
 sol = Solution()
-costs = [1,3,2,4,1]
-coins = 7
-res = sol.maxIceCream(costs, coins)
+nums = [15,45,20,2,34,35,5,44,32,30]
+res = sol.xorBeauty(nums)
 print(f"res={res}")
