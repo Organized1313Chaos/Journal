@@ -10,7 +10,11 @@
 
    - soft reset: move your HEAD to where they were , but leave your local files
    - hard reset: local code and local history be just like it was at that commit
-   
+4. git add . 
+   Stage all untracked files
+   - git add `<filename>` 
+   stage only files with the given filname
+
 
 **Merge Two Repositories**
 
