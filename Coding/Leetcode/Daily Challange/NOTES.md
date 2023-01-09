@@ -1,0 +1,1 @@
+- monotonic stack stores both position and magnitude of information. 
