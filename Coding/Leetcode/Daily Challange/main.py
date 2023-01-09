@@ -6,21 +6,17 @@ Name: Find Xor-Beauty of Array
 '''
 
 '''
-Failed Approach 1: Brute Force
+Approach 1:Failed, Brute Force
+Approach 2: Successful, simple XOR
 '''
 
 class Solution:
     def xorBeauty(self, nums) -> int:
-        triplets = []
+        ans = 0
         for i in nums:
-            for j in nums:
-                for k in nums:
-                    triplets.append( (i,j,k) )
-                    
-        for p in triplets:
-            for q in triplets:
-                if ( (p[0]| p[1])&p[2] ) ^ ( (q[0]| q[1])&q[2] )==1:
-                    print(f"{p} ^ {q} ==> {( (p[0]| p[1])&p[2] ) ^ ( (q[0]| q[1])&q[2] )}") 
+            ans =  ans ^ i
+            
+        return ans
             
 sol = Solution()
 nums = [0,1]
