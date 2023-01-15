@@ -36,5 +36,9 @@
 2. git checkout -b branch-name
    creates a new branch and switches to it.
 
+
+**Tree structure**
+- tree -L <Level>
+
 **Merge one Git Repository into Existing One**
 1. [stackoverflow](https://stackoverflow.com/questions/1683531/how-to-import-existing-git-repository-into-another)
