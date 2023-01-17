@@ -11,12 +11,10 @@ Approach 1:Successful, Inorder Traversal
 
 '''
 NOTES:
-1. Pass the parent as -1 initially
-2. Construct a bidirectional graph, avoid back traversal using 
-   parent==child: then continue
+pass
 
 MISTAKES:
-return type was hasApple, Didn't take account for if children has apple
+pass
 '''
 class Solution:
     def countGood(self, nums, k) -> int:

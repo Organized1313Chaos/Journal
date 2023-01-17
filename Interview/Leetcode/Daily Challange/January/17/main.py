@@ -19,22 +19,18 @@ Link: https://leetcode.com/problems/flip-string-to-monotone-increasing/solutions
 NOTES:
 
 MISTAKES:
-forgot to consider the initial case of increasing 1 as bit
+do not initialise ans as len(s)
 '''
 
 class Solution:
     def minFlipsMonoIncr(self, s: str) -> int:
-        N = len(s)
-        dp = [0]*N
-
+        ans = 0
         num = 0
-        if s[0]=='1': num+=1
-        for ind, c in enumerate(s[1:], start=1):
+
+        for c in s:
             if c=='0':
-                dp[ind] = min(dp[ind-1]+1, num) #previously sorted + flip 0-->1, flip all 1 to 0
+                ans = min(ans+1, num)
             else:
-                num+=1
-                dp[ind] = dp[ind-1]
-                
-        print(dp)
-        return dp[-1]
+                num +=1
+
+        return ans
