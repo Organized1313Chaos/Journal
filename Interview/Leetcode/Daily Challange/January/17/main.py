@@ -11,26 +11,30 @@ Calculate all 0's to be flipped
 two cases: if 0: decrease m and update ans
            else 1: increase m (why? To maintain left window with 0s, right window with 1s) 
 
+Approach 2: Successful, dynamic programming
+Link: https://leetcode.com/problems/flip-string-to-monotone-increasing/solutions/2912351/flip-string-to-monotone-increasing/
 '''
 
 '''
+NOTES:
+
+MISTAKES:
+forgot to consider the initial case of increasing 1 as bit
 '''
 
 class Solution:
     def minFlipsMonoIncr(self, s: str) -> int:
-        m = 0
-        for c in s:
-            if c=='0':
-                m +=1
-        
-        ans = m
+        N = len(s)
+        dp = [0]*N
 
-        for c in s:
+        num = 0
+        if s[0]=='1': num+=1
+        for ind, c in enumerate(s[1:], start=1):
             if c=='0':
-                m-=1
-                ans = min(m,ans)
+                dp[ind] = min(dp[ind-1]+1, num) #previously sorted + flip 0-->1, flip all 1 to 0
             else:
-                m+=1
-
-        return ans
-        
+                num+=1
+                dp[ind] = dp[ind-1]
+                
+        print(dp)
+        return dp[-1]
