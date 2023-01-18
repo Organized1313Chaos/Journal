@@ -4,3 +4,4 @@ venv
 *launch.json
 *.env
 *ecommerce-website
+*.dist
