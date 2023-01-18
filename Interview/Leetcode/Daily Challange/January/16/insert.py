@@ -19,47 +19,38 @@ Reason Of Failure: Not able to cover the edge cases.
 '''
 class Solution:
     def insert(self, intervals, newInterval):
-        if not intervals: return [newInterval]
-        N = len(intervals)
-        start, end =newInterval
-        
-        index = 0
-        
-        
-        for s, e in intervals:
-            if start>e:
-                index +=1
-                continue
-            break
-        # print(index)
-        try:
-            min_ = min( start, intervals[index][0] )
-        except:
-            min_ = start
+        result = []
+        new_start,new_end = newInterval
+        used = False
 
-        index2 = N-1
-        
-        for i in range(N-1,index,-1):
-            if end<intervals[i][0]:
-                index2-=1
+        for start, end in intervals:
+            if end<new_start:
+                result.append( [start, end] )
                 continue
-            break
-        try:
-            max_ = max( end, intervals[index2][1] )
-        except:
-            max_ = end
-        # print(min_, max_)
-        
-        # Need to handle edge cases here
-        if index==index2:
-            if min_<intervals[index][0]:
+            if not used:
+                min_ = min( new_start, start )
+                max_ = max( new_end, end )
+                result.append( [min_, max_] )
+                used = True
+                continue
+            
+            if result[-1][1]>end:
+                continue
+            
+            if result[-1][1]<=start:
+                result[-1][0] = min( result[-1][0], start )
+                result[-1][1] = min( result[-1][1], end )
+                continue
+            
+            if result[-1][1]<start:
+                result.append( [start, end] )
+                continue
+            
+            result.append( [start, end] )
+            
+        return result   
                 
-                return intervals[:index] + [newInterval, intervals[index] ] + intervals[index2+1:]
-            
-        
-        ans = intervals[:index] + [[min_,max_]] + intervals[index2+1:]
-        return ans 
-            
+           
 sol = Solution()
 intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]]
 newInterval = [4,8]
