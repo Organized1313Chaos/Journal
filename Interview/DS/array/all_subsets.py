@@ -56,3 +56,28 @@ class Solution:
         
         return output
 # ==========================================================================
+
+
+class Solution:
+    def findSubsequences(self, nums: list[int]) -> list[list[int]]:
+        result = set()
+        sequence = []
+
+        def backtrack(index):
+            # if we have checked all elements
+            if index == len(nums):
+                result.add(tuple(sequence))
+                return
+            # if the sequence remains increasing after appending nums[index]
+            
+            # append nums[index] to the sequence
+            sequence.append(nums[index])
+            # call recursively
+            backtrack(index + 1)
+            # delete nums[index] from the end of the sequence
+            sequence.pop()
+            # call recursively not appending an element
+            backtrack(index + 1)
+        
+        backtrack(0)
+        return result
