@@ -1,5 +1,7 @@
 ###git Commands
 
+- check git verision in cmd--> git --version
+
 **Basic**
 1. `git init`
    initialize the git repository

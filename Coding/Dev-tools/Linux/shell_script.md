@@ -152,11 +152,177 @@ $(( expression ))
 echo "Addition = $(( number_1 + number_2 ))"
 echo "Addition = $(expr  $number_1 + $number_2 )"
 ```
--Use \* instead of * to get the correct result instead of syntax error.
+-Use \* instead of * to get the correct result instead of syntax error
+
+```
+- man bc for basic calculations
+- echo "20.5+5" | bc
+- echo "scale=2;20.5+5" | bc
+- echo "scale=2;3^3" | bc -l
+- echo "scale=2;sqrt(27)" | bc -l         (l flag is used for all math library)
+```
+
+ 
+
+**Case Statement**
+
+```
+case expression in 
+    pattern )
+        statements ;;
+    pattern2 )
+        statements ;;
+    regex pattern)
+        statements ;;
+    *) 
+esac
+```
+
+**Arrays**
+- starts with index 0
+```
+os = ('ubuntu' 'windows' 'kali')
+#print all elements
+echo "${os[@]}"
+# print index of the array
+echo "${!os[@]}"
+# print the lenght of an array
+echo "${#os[@]}"
+#print first element of an array
+echo "${os[0]}"
+#add new element to array
+os[3] = 'mac'
+# remove the element of an array
+unset os[2]
+```
+- the default data type of string is an array but the value of array will be assigned to 0th index element 
+
+**While**
+
+```
+while [ condition ]
+do
+    command1
+    command2
+    command3
+done
+```
+
+Example:
+
+```
+n=1
+
+while [  $n -le 10 ]
+do
+    echo "$n"
+    n = $(( n+1 ))
+    # or use 
+    # (( n++ ))
+    sleep 1
+done
+```
+
+**until loop**
+
+```
+#condition needs to be false
+#in order to execute the following
+#commands
+
+until [ condition ]
+do
+    command1
+    command2
+    command3
+done
+```
+
+**For Loop**
+
+list iterator
+```
+for VARIABLE in 1 2 3 4 5
+do
+    command1
+    command2
+    command3
+done
+```
+
+file iterator
+
+```
+for VARIABLE in file1 file2 file3
+do
+    command1 on $VARIABLE
+    command2
+    command3
+done
+```
+
+```
+# (initialization, compare, increment )
+for (( EXP1; EXP2; EXP3 ))
+do
+    command1
+    command2
+    command3
+done
+```
+Example:
+
+```
+# range --> {1..5}
+# range --> {1..5..2}
+for i in 1 2 3 4 5
+do 
+    echo $i
+done
+```
+
+```
+for (( i=0; i<5; i++ ))
+do
+    echo $i
+done
+```
+**List of commands**
+
+```
+for command in ls pwd date
+do 
+    $command
+done
+```
+
+
+**Read file**
+```
+while read p
+do
+    echo $p
+done < file_name.sh
+```
+
+```
+cat file_name.sh | while read p
+do 
+    echo $p
+done
+```
+
+- -r flag prevents backslash escape
+**Open a new terminal**
+
+```
+gnome-terminal &
+xterm &
+```
 
 
 
 **References:**
 - [YouTube](http://www.codebind.com/linux-tutorials/bash-shell-scripting-statement-fi-else-fi-elif-else-fi/)
 
-- [Tutorial Website](http://www.codebind.com/linux-tutorials/bash-shell-scripting-statement-fi-else-fi-elif-else-fi/)
+- [Tutorial Website](http://www.codebind.com/tag/bash/)
