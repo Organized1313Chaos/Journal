@@ -35,6 +35,7 @@ list all files with their permissions
 `name = Nehul
 echo $name`
 `
+- All the variables in shell scripting are global variables
 **# variable name should not start with a number**
 
 
@@ -239,6 +240,8 @@ done
 ```
 
 **For Loop**
+- break and continue to exist loop prematurely.
+
 
 list iterator
 ```
@@ -320,6 +323,110 @@ gnome-terminal &
 xterm &
 ```
 
+**Select Loop**
+
+```
+select WORD in LIST     
+do           
+RESPECTIVE-COMMANDS
+done 
+```
+
+Example:
+```
+select name in mark john tom ben
+
+do 
+    case $name in 
+    mark) 
+        echo mark selected
+        ;;
+    john) 
+        echo john selected
+        ;;
+    *)
+        echo "Error, select properly"
+        ;;
+    esac 
+
+done
+```
+
+**Functions**
+
+```
+function name(){
+    Commands
+}
+
+name () {
+    Commands
+}
+```
+
+Examples:
+```
+function Hello(){
+    echo "Hello"
+}
+
+function print(){
+    # accessing variables
+    echo $1 $2 $3
+    # Global Variable
+    name = $1
+
+    #Local variable
+    local name2 =  $2
+}
+
+quit () {
+    exit
+}
+
+# Function Call
+Hello
+print Hello World Again
+quit
+```
+
+**Excercise**
+Given a filename, check whether file exists or not
+
+```
+usage() {
+    echo "You need to provide an argument"
+    echo "usage : $0 file_name"
+}
+
+is_file_exists() {
+    local file = "$1"
+    [[ -f "$file" ]] && return 0 || return 1
+}
+
+[[ $# -eq 0 ]] && usage
+
+if ( is_file_exists "$1" )
+then
+    echo "File Found"
+else
+    echo "File not found"
+fi
+```
+
+**Readonly Variable**
+```
+var = 31
+readonly var
+
+# Does not throw error but doesn't change value
+var = 50
+
+echo "var => $var"
+```
+- `We can make a function readonly with the same keyword along with -f flag`
+- `place readonly at the end of the file and it will show you all the readonly variables assigned in the file.`
+- `readonly -f ==> Will give you  the list of all the  readonly functions`
 
 
 **References:**
