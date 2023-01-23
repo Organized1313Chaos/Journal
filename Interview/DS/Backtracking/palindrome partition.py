@@ -38,6 +38,26 @@ class Solution:
 
         return output
 
+# ==============================================================
+
+'''
+Approach 2: 
+Link: https://leetcode.com/problems/palindrome-partitioning/solutions/1667786/python-simple-recursion-detailed-explanation-easy-to-understand/
+'''
+
+from functools import lru_cache
+class Solution(object):
+    @lru_cache  # the memory trick can save some time
+    def partition(self, s):
+        if not s: return [[]]
+        ans = []
+        for i in range(1, len(s) + 1):
+            if s[:i] == s[:i][::-1]:  # prefix is a palindrome
+                for suf in self.partition(s[i:]):  # process suffix recursively
+                    ans.append([s[:i]] + suf)
+        return ans
+    
+
 
 '''
 Time Complexity: O(n * 2^n)
