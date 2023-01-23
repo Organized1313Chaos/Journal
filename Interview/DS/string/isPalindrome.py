@@ -25,3 +25,7 @@ class Solution:
 
         return True
 
+
+# Python 1-Liner
+def isPalindrome(s):
+    return s == s[::-1]
