@@ -1,6 +1,4 @@
 # ====================================================
-# ====================================================
-# ====================================================
 '''
 Leetcode Question
 Date: January 11, 2023
@@ -8,9 +6,6 @@ Problem Number: 974
 Name: Subarray Sums Divisible by K
 '''
 # ====================================================
-# ====================================================
-# ====================================================
-
 
 '''
 Approach 1: Failed Approach, Brute force 
@@ -26,87 +21,51 @@ MISTAKES:
 if you append a copy of list (mutable objects)
 Ensure that you store a copy instead of reference
 '''
-
 # ====================================================
-
 class Solution:
-    def findSubsequences(self, nums: list[int]) -> list[list[int]]:
-        N= len(nums)
-        temp = []
-        output = []
-        
-        for ind, val in enumerate(nums):
-            temp.append((val, ind))
-        
-        temp.sort(key =  lambda x: (x[0], x[1]) )
-        print(temp)
-        print('\n'*2)
-        
-        result = []
-        
-        for i in range(N-1):
-            if temp[i][0]==4:
-                pass
-            tp = [temp[i]]
-            res_tp = [temp[i][0]]
-            for j in range(i+1, N):
-                if tp[-1][1]< temp[j][1]:
-                    tp.append(temp[j])
-                    res_tp.append( temp[j][0] )
-                    output.append( tp )
-                    result.append( res_tp.copy() )
-                    
-        return result
+    def partition(self, s: str) -> list[list[str]]:
+        N = len(s)
 
-# ====================================================
+        def isPalindrome(string):
+            if len(string)<2: return True
+            l, r = 0, len(string)-1
 
-'''
-Approach 2: Heap Approach, heapify the tuple (value, index) 
-- Did Not Implement
-
-Approach 0: Monotonic Stack
-Don't know if it will work
-'''
-# ====================================================
-
-
-'''
-Approach 3: Brute Force, Generate all the subsets
-check if the subset is feasible to append
-'''
-
-'''
-Note: If Solution space itself takes O(2^N) then may be your algorithm 
-can run in exponential order
-'''
-# ====================================================
-
-'''
-Approach 4: Successful
-Generate all the subsets that satisfy the given property
-'''
-class Solution:
-    def findSubsequences(self, nums: list[int]) -> list[list[int]]:
-        subsets = [ [] ]
-        
-        for num in nums:
-            temp  = subsets.copy()
-            for lst in temp:
-                ele = lst + [num]
-                #DO not add if violets the conditino
-                if len(ele)>1 and ele[-1] < ele[-2]:
-                    continue   
-                subsets.append(ele.copy())
+            while l<r:
+                if string[l]!=string[r]:
+                    return False
+                
+                l+=1
+                r-=1
             
-        subsets  = [ tuple(lst) for lst in subsets if len(lst)>1 ]
-        subsets = list( set(subsets) )
+            return True
 
-        return subsets
-        
+        output = []
+
+        def helper(i, string, path=[]):
+            nonlocal output
+            if i==N:
+                output.append(path)
+                return
+            
+            if isPalindrome(string):
+                path.append(string)
+                output.append(path)
+                path.pop(-1)
+            
+            for j in range(1, len(string)):
+                str1 = string[:j]
+                str2 = string[j:]
+                if isPalindrome(str1):
+                    path.append(str1)
+                    helper(0, str2, path)
+
+        helper(0,s,[])
+        pass
+# ====================================================
 
 sol = Solution()
-nums = [4,6,7,7]
-res = sol.findSubsequences(nums)
+s = "aab"
+res = sol.partition(s)
 print(f"res={res}")
 
         
