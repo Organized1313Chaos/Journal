@@ -1,0 +1,5 @@
+- BFS time complexity: O(|V| + |E|)
+- Shortest Path Algorithm
+  - Unweighted graph - BFS
+  - Weghted Graph - Dikjstra
+- Dijkstra's algo `=>` priority queue/heap for storing vertices.
