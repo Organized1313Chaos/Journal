@@ -9,6 +9,12 @@ Link: https://leetcode.com/problems/find-closest-node-to-given-two-nodes/descrip
 # ====================================================
 
 '''
+
+Observation: 
+- Property: Each node can have at most one outgoing edge
+- There can be only one path from node1 to node2 
+
+
 Approach 1: Succcessfull Approach, BFS
 - Run BFS and store distances from node to each node using BFS
 - For each node calculate the maximum and update the global minimum of such distance
