@@ -4,6 +4,7 @@ Leetcode Question
 Date: January 11, 2023
 Problem Number: 974
 Name: Subarray Sums Divisible by K
+Link:
 '''
 # ====================================================
 
@@ -20,6 +21,9 @@ pass
 MISTAKES:
 if you append a copy of list (mutable objects)
 Ensure that you store a copy instead of reference
+
+Time Complexity: 
+Space Complexity:
 '''
 # ====================================================
 class Solution:
