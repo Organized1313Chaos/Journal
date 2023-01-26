@@ -1,0 +1,1 @@
+- BFS for unweighted graph always gives the minimum distance, same cannot be said about weighted graph A breadth-first search has no way of knowing if a particular discovery of a node would give us the cheapest path to that node. . 
