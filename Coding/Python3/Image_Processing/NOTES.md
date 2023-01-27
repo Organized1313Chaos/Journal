@@ -1,1 +1,4 @@
 - OCR: Optical Character Recognition
+- OpenCV: Open Source Computer Vision Library
+- Pillow is a fork of the Python Imaging Library (PIL)
+- 
