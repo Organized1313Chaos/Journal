@@ -37,4 +37,19 @@ for _ in range(10):
     print(new_ele)
     bisect.insort(lst, new_ele)
     print(lst)
+    
 
+# =============================================================
+
+#check if element exists in the list
+def find_in_sorted_list(elem, sorted_list):
+
+    'Locate the leftmost value exactly equal to x'
+    i = bisect.bisect_left(sorted_list, elem)
+    if i != len(sorted_list) and sorted_list[i] == elem:
+        return i
+    return -1
+
+def in_sorted_list(elem, sorted_list):
+    i = bisect.bisect_left(sorted_list, elem)
+    return i != len(sorted_list) and sorted_list[i] == elem
