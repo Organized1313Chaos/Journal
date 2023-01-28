@@ -68,7 +68,7 @@ cv2.waitKey(0)
         cv2.waitKey(0)
         ```
 
-  - Thrshold
+  - Threshold
     - To convert an image into a bimary image, each pixel is either black or white
     - Methods: binary, adaptive, Otsu thresholding
     - params: source image, thres value, max val if val>thres, threshold method
