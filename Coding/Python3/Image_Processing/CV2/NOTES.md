@@ -67,3 +67,16 @@ cv2.waitKey(0)
         cv2.imshow("Resized Image", resized_img)
         cv2.waitKey(0)
         ```
+
+  - Thrshold
+    - To convert an image into a bimary image, each pixel is either black or white
+    - Methods: binary, adaptive, Otsu thresholding
+    - params: source image, thres value, max val if val>thres, threshold method
+      ```
+      # Perform binary thresholding
+      ret, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
+
+      # Display the thresholded image
+      cv2.imshow("Thresholded Image", thresh)
+      cv2.waitKey(0)
+      ```

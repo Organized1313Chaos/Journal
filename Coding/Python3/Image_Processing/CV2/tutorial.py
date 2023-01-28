@@ -37,3 +37,14 @@ resized_img = cv2.resize(img, dim, interpolation = cv2.INTER_LINEAR)
 # Display the resized image
 cv2.imshow("Shrinking Image", resized_img)
 cv2.waitKey(0)
+
+# Image Thresholding
+
+
+# Perform binary thresholding
+ret, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
+
+# Display the thresholded image
+cv2.imshow("Thresholded Image", thresh)
+cv2.waitKey(0)
+
