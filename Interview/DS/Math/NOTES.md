@@ -1,0 +1,4 @@
+- Fermat's Little Theorem
+  - `(a^b)% MOD = ((a % MOD) ^b) % MOD`
+  - `a^p ≡ a (mod p)`
+  - Used to find the inverse of a number mod p (prime number)
