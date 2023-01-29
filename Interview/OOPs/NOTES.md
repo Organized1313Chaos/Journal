@@ -1,0 +1,1 @@
+- **Abstraction**: Hide irrelevent details from the users
