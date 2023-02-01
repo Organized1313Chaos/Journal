@@ -5,7 +5,7 @@ Date: February 11, 2023
 Problem Number: 1071 
 Name: Greatest Common Divisor of Strings
 Link: https://leetcode.com/problems/greatest-common-divisor-of-strings/description/
-Solution Link: 
+Solution Link: https://leetcode.com/problems/greatest-common-divisor-of-strings/solutions/3024822/greatest-common-divisor-of-strings/?orderBy=most_votes
 '''
 # ====================================================
 
@@ -17,59 +17,76 @@ No of Test Cases Passed: All
 
 '''
 NOTES:
-pass
+- Since both strings contains multiples of the identical segment base, their concatenation must be consistent, regardless of the order (str1 + str2 = str2 + str1).
 
 MISTAKES:
-Outer index was initially 0:N+1 --> Change it to 0:N
+- Outer index was initially 0:N+1 --> Change it to 0:N
+- Condition:
+    if n2%N!=0 or n1%N!=0:
+        continue
+- Failed TestCase:
+  "AAACCC", "AAA"
+- imporovement: try ( candidate_string*(N//n)==originalstring )
 
-Time Complexity: 
+Time Complexity: O(min(m,n)⋅(m+n)) 
 Space Complexity:
+
+Official solution:
+Time complexity: O(m+n)O(m + n)O(m+n)
 '''
-# ====================================================
+# ====================================================        
 class Solution:
     def gcdOfStrings(self, str1: str, str2: str) -> str:
-        out = ""
         n1 = len(str1)
         n2 = len(str2)
 
-        for index in range(min(n1,n2)):
-            if str1[index]==str2[index]:
-                out += str1[index]
-                continue
-        if out=="": return out
-        #case 1
-        M = len(out)
-        temp = out
-
-        for p in range(M-1,-1,-1):
-            out = temp[:p+1]
-            flag = True
+        # n1 is small
+        if n1>n2:
+            str1, str2 = str2, str1
+            n1, n2 = n2, n1
+            
+        for p in range(n1-1, -1, -1):
+            out = str1[:p+1]
             N = len(out)
+            flag = True
+            
+            if n2%N!=0 or n1%N!=0:
+                continue
+
             for i in range(0, n1, N):
+                main_string = str2[i:i+N] 
                 if str1[i:i+N]!=out:
                     flag = False
                     break
-                
-            if flag==False:
+            if flag == False:
                 continue
             
             for i in range(0, n2, N):
+                main_string = str2[i:i+N] 
                 if str2[i:i+N]!=out:
                     flag = False
                     break
-            if flag==False:
+            if flag == False:
                 continue
+                
+            if flag: return out
             
-            return out
-
         return ""
-        
-
-
 # ====================================================
 
 sol = Solution()
-str1 = "TAUXXTAUXXTAUXXTAUXXTAUXX"
-str2 = "TAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXX"
+str1 = "NLZGMNLZGM NLZGMNLZGMNLZGM NLZGMNLZGMNLZGM"
+str2 = "NLZGMNLZGM NLZGMNLZGMNLZGM NLZGMNLZGMNLZGM NLZGM"
+str1 = "".join(str1.split())
+str2 = "".join(str2.split())
 res = sol.gcdOfStrings(str1, str2)
 print(f"res={res}")
+
+# ======================================================
+# Observations Dude, Observations!!!!!!!!!
+import math
+class Solution:
+    def gcdOfStrings(self, str1: str, str2: str) -> str:
+        if (str1+str2 != str2 + str1):
+            return ""
+        return str1[:math.gcd(len(str1),len(str2))]

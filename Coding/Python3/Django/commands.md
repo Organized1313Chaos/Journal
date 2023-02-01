@@ -64,3 +64,6 @@
 - `TIME_ZONE = 'Asia/Kolkata'`
   - automatically make changes to the datetime feilds in different models
 
+**Pagination**
+- Link: [Pagination](https://www.geeksforgeeks.org/how-to-add-pagination-in-django-project/)
+- 1-based indexing 

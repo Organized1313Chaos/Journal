@@ -8,6 +8,7 @@
 - `cat >> file_name` to append at the end of the file
 - `chmod -w file_name` to change the file permissions, <br>-w simply removes the write permission , +w adds the write permissions
 - ```$$ ==> gives PID of the process```
+- `cd ~` : Go to home directory
 
 **Signals**
 - `Ctrl + C, interrupt signals , signal term: sigInt`
