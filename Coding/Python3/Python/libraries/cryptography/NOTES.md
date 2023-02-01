@@ -1,0 +1,12 @@
+- **Symmetric Encryption**
+  - single shared key
+  - `Ex. AES, Blowfish, ChaCha20`
+- **Asymmetric Encryption**
+  - secure communication between two parties 
+  - public key for encryption, private key for decryption
+- **Hashing** 
+  - `Exa. SHA-256, SHA-384, SHA-512`
+- **Signing and Verifying**
+  - digital signature algorithms
+  - `RSA-PSS, RSA-PKCS1v15`
+  - signed with private key and verified with public key
