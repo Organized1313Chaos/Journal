@@ -54,6 +54,34 @@
 
   - `blank= True (Front-End: not Required)`
   -  `null= True (Back-end: nulls are allowed)`
+  -  `Enums`
+     ```
+        ACCEPTED_ID_DOCS=(
+            ('AADHAAR','AADHAAR'),
+            ('VOTER ID','VOTER ID'),
+            ('DRIVING LICENSE','DRIVING LICENSE'),
+            ('PASSPORT','PASSPORT')
+          )
+     ```
+  - Setting file-path
+    ```
+    def set_selfie_path(instance, filename):
+      format = str(instance.pk) + '/selfie/' + filename
+      return format
+    ``` 
+    
+  - `All types of fields`
+    ```
+    uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    application_no = models.CharField(max_length=20, null=True, blank=True)
+
+    def set_selfie_path(instance, filename):
+      format = str(instance.pk) + '/selfie/' + filename
+      return format
+
+    selfie_path = models.FileField(upload_to=set_selfie_path, null=True, blank=True)
+
+    ```
 ## `admin.py`    
 - After creating the model make sure you register in the app/admin.py
 - You cannot add two different views for the same model in `admin.py`
