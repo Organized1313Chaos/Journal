@@ -63,6 +63,7 @@ Note: git commit -am "message": add files to stages, make commits simultaneously
 **Notes:**
 - Clone specific branch
   `git clone -b branch_name link`
+  `Example: git clone -b dev-s  git@13.232.169.19:/srv/git/socialtick_backend `
 
 - Before pulling
   ```

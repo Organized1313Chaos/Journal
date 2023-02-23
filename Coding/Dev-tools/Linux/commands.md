@@ -24,4 +24,8 @@
   `Method 2:` `#!/bin/bash -x` ( include the line at the top)
   `Method 3:` `set -x` will start debugging at random line_number
   set +x to deactivate the debugging mode
+<br>
+
+- **Download and Installation**
+  - `sudo apt-get install vlc`
 
