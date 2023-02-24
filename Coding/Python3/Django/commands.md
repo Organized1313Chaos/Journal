@@ -13,6 +13,7 @@
 
 **Run project**
 - ```python manage.py runserver```
+- ```python manage.py runserver 0.0.0.0:8000```
 
 **Start App**
 - `python manage.py startapp <app_name>`
@@ -176,6 +177,14 @@ admin.site.register(User, UserAdmin)
 - `INSTALLED_APPS - ['appName1', 'appName2']`
 - `TIME_ZONE = 'Asia/Kolkata'`
   - automatically make changes to the datetime feilds in different models
+
+```
+  MEDIA_URL = '/media/'
+  MEDIA_HOST = os.getenv('MEDIA_HOST')
+  # MEDIA_ROOT = os.environ.get('MEDIA_ROOT', os.path.join(BASE_DIR, 'media'))
+  MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+```
 
 ## `views.py`
 Imports:
