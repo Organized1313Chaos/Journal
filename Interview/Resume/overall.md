@@ -6,6 +6,9 @@
     email: nehul1313patel@gmail.com
     contact: (+91) 8200134468
     LinkedIn: https://www.linkedin.com/in/nehul-patel-4b71b0179
+
+    LinkedIn: https://www.linkedin.com/in/nehul-patel/
+
     Github: https://github.com/Nehul1313
 
 **EDUCATION**
@@ -20,6 +23,12 @@
     Eklavya Model Residential School, Kaprada, Valsad
         - Class X, GSEB Board, Percentage: 93.83
 
+**SCHOLASTIC ACHIEVEMENTS**
+
+    - INSPIRE Scholarship: Ranked in statewise top 1% students in Gujarat; awarded the scholarship by GHSEB (2017)
+    - Dr. Ambedkar National Merit Award: Selected amongst top 60 students nationwide to recieve merit of certifcate (2016)
+    - Vocational Training Program: Amongst top 30 students selected for the training at Science city Ahmedabad (2015) 
+
 **TECHNICAL SKILLS**
 
     Languages: Python, Java, C++, C#, R,  MATLAB
@@ -28,6 +37,14 @@
     Web Development: HTML, CSS, PHP, JavaScript, Jquery, BootStrap
     Framework: Django, React
     Development Tool: Linux, Git, Visual Studio, LaTeX
+
+**Experience**
+Hello verify India Private Limited | Software Developer				                   July, 2022-Present
+
+- Designed an address-matching algorithm using fuzzy logic and Metaphone for a criminal check rule engine
+- Used graph pruning algorithm with ordered dictionaries to obtain the possible correct matching path for address
+- Trained random forest classifier model to classify red and green criminal cases to achieve 91% recall score 
+- Developed a Django-based PCC web application for project UK using Django and Django REST Framework
 
 **INTERNSHIP**
 
@@ -47,6 +64,11 @@
     - Operating Systems,
     - Data Mining,
     - Theory of Computation
+    - Advanced Algorithms,
+    - Computer Architecture
+
+    Electrical:
+    - Digital Electronics 
 
     Mathematics: 
     - Calculus,
@@ -60,6 +82,12 @@
     - Functional Analysis, 
     - Number Theory, 
     - Game theory
+    - Discrete Mathematics,
+    - Number Theory
+    - Financial Mathematics
+    - Algebra
+    - Finite Element Theory & Appli.
+    - Theory Of Computation
 
 **PROJECT**
 
@@ -118,6 +146,8 @@
     • BSA Color’s Award: Received the prestigious Color Award by BSA for significant contribution to sports (2019)  
     • Significant Contribution Award: Maintained Sports culture by encouraging participation in Hostel (2019) 
     • Social Endeavors: Received Certificate of Appreciation by the  organization Relying Helping Hands  (2019)
+
+Link: [Google-Drive](https://drive.google.com/drive/folders/1-RPVBKob2tBdBp9u3spcEcXgfKLgKcEb?usp=sharing)
 
 
 
