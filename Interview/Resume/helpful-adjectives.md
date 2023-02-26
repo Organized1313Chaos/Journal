@@ -20,6 +20,9 @@ To retrieve something
 Scraped, cleaned, and assimilated
 Visualized univariate and multivariate clusters of water usage, price, income, and otherfactors in the US using Jenks and K-Means algorithms
 
+Doing something using ML techniques
+Performed exploratory data analysis to generate preliminary insights on a private data-set of 187 vertigo patients 
+
 Implementing data modeling
 
 For linkedIn profile
