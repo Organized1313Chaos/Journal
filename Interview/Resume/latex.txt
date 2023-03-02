@@ -1,0 +1,1 @@
+\resumeItem{Trained random forest classifier model to classify red and green criminal cases to achieve 91 \% recall score}

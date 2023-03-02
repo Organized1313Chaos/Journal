@@ -26,7 +26,7 @@
 **SCHOLASTIC ACHIEVEMENTS**
 
     - INSPIRE Scholarship: Ranked in statewise top 1% students in Gujarat; awarded the scholarship by GHSEB (2017)
-    - Dr. Ambedkar National Merit Award: Selected amongst top 60 students nationwide to recieve merit of certifcate (2016)
+    - Dr. Ambedkar National Merit Award: Selected amongst top 60 students nationwide to receive merit of certificate (2016)
     - Vocational Training Program: Amongst top 30 students selected for the training at Science city Ahmedabad (2015) 
 
 **TECHNICAL SKILLS**
@@ -45,6 +45,11 @@ Hello verify India Private Limited | Software Developer				                   Ju
 - Used graph pruning algorithm with ordered dictionaries to obtain the possible correct matching path for address
 - Trained random forest classifier model to classify red and green criminal cases to achieve 91% recall score 
 - Developed a Django-based PCC web application for project UK using Django and Django REST Framework
+
+
+Designed and developed a full stack web application utilizing Python Django and Rest Framework.
+Integrated APIs for Google Map, ID check, Liveliness check, and Facematch to enhance user experience and security.
+Implemented schedulers using cron-jobs to ensure timely notifications and reminders.
 
 **INTERNSHIP**
 
