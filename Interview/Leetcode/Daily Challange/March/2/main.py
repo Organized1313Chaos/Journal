@@ -1,31 +1,33 @@
 # ====================================================
 '''
 Leetcode Question
-Date: January 11, 2023
-Problem Number: 974
-Name: Subarray Sums Divisible by K
-Link: 
-Solution Link: 
+Date: March 2, 2023
+Problem Number: 443
+Name: String Compression
+Link: https://leetcode.com/problems/string-compression/
+Solution Link: https://leetcode.com/problems/string-compression/solutions/3245597/day-61-two-pointer-o-1-space-and-o-n-time-easiest-beginner-friendly-sol/
 '''
 # ====================================================
 
 '''
-Approach 1: Failed Approach, Brute force 
-Paradigm: 
-- Sort based on values, and append the index if necessary 
-No of Test Cases Passed: 8/58
+Approach 1: Successful Approach, Brute force 
+Paradigm: Simple Looping, Proper execution skills 
+No of Test Cases Passed: All
 '''
 
 '''
 NOTES:
 pass
 
-MISTAKES:
-if you append a copy of list (mutable objects)
-Ensure that you store a copy instead of reference
+Mistakes: 
+The question asked us to perform the operations in place 
 
-Time Complexity: 
-Space Complexity:
+Learning:
+When you have to use index comparison use while instead of 
+for loop
+
+Time Complexity: O(N)
+Space Complexity: O(N)
 '''
 # ====================================================
 class Solution:
@@ -47,12 +49,19 @@ class Solution:
                 continue
             
             output += 1 + len(str(count))
-            res += [ chars[i-1], str(count) ]
+            res += [ chars[i-1]]
+
+            for j in str(count):
+                res.append(j)
+
             print(f"character: {chars[i-1]} & count: {count}")
             count  = 1
 
         if count!=1:
-            res += [ chars[i], str(count) ]
+            res += [ chars[i] ]
+            for j in str(count):
+                res.append(j)
+            
             output += 1 +  len(str(count))
         else:
             res += [ chars[i] ]
@@ -60,7 +69,11 @@ class Solution:
 
         
         print(f"character: {chars[i]} & count: {count}")
-        chars = res
+        for ind, val in enumerate(res):
+            chars[ind] = val
+
+        for j in range(ind, len(chars)-1):
+            chars.pop(-1)
             
 
 # ====================================================
@@ -69,5 +82,35 @@ sol = Solution()
 chars = ["a","a","b","b","c","c","c"]
 res = sol.compress(chars)
 print(f"res={res}")
+
+
+# =====================================================
+
+class Solution:
+    def compress(self, chars: list[str]) -> int:
+        n = len(chars)
+        if n == 1:
+            return 1
+        
+        i = 0
+        j = 0
+        
+        while i < n:
+            count = 1
+            while i < n - 1 and chars[i] == chars[i+1]:
+                count += 1
+                i += 1
+            
+            chars[j] = chars[i]
+            j += 1
+            
+            if count > 1:
+                for c in str(count):
+                    chars[j] = c
+                    j += 1
+            
+            i += 1
+        
+        return j
 
         
