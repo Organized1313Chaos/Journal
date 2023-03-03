@@ -49,7 +49,7 @@ Hello verify India Private Limited | Software Developer				                   Ju
 
 Designed and developed a full stack web application utilizing Python Django and Rest Framework.
 Integrated APIs for Google Map, ID check, Liveliness check, and Facematch to enhance user experience and security.
-Implemented schedulers using cron-jobs to ensure timely notifications and reminders.
+Implemented schedulers using cron-jobs to ensure timely notifications and reminders
 
 **INTERNSHIP**
 
