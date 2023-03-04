@@ -11,7 +11,7 @@
 
 Sample Script: 
 
-- ```*/2 * * * *  /usr/bin/env bash -c 'source /home/hv778899/projects/DBT_Backend/dbtenv/bin/activate && cd  /home/hv778899/projects/DBT_Backend/dbt_backend && python3 manage.py runcrons schedulers.programs.applicant_initial_sms'>/dev/null 2 >> new_file_logs.txt```
+- ```*/2 * * * *  /usr/bin/env bash -c 'source /home/hv778899/projects/DBT_Backend/dbtenv/bin/activate && cd  /home/hv778899/projects/DBT_Backend/dbt_backend && python3 manage.py runcrons schedulers.programs.applicant_initial_sms --force >> new_file_logs.txt'>/dev/null 2```
 <br>
     
   - Explanation:
@@ -23,7 +23,7 @@ Sample Script:
 
 To get the output of the sceduler:
 
-   - `python3 manage.py runcrons schedulers.programs.applicant_initial_sms'>/dev/null 2 >>output_logs.txt`
+   - `python3 manage.py runcrons schedulers.programs.applicant_initial_sms --force   output_logs.txt'>/dev/null 2`
 
 
 Link: https://crontab.guru/
