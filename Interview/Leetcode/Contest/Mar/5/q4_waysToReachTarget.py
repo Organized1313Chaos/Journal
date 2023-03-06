@@ -5,7 +5,7 @@ Date: March 5, 2023
 Problem Number: 2585 
 Name: Number of Ways to Earn Points
 Link: https://leetcode.com/problems/number-of-ways-to-earn-points/description/
-Solution Link: 
+Solution Link: https://leetcode.com/problems/number-of-ways-to-earn-points/solutions/3258120/java-c-python-knapsack-dp/?orderBy=most_votes
 '''
 # ====================================================
 
@@ -105,7 +105,7 @@ class Solution:
     
 # =====================================================================================
 '''
-Solution Link: 
+Solution Link: https://leetcode.com/problems/number-of-ways-to-earn-points/solutions/3258120/java-c-python-knapsack-dp/?orderBy=most_votes
 '''
 from functools import cache
 class Solution:
