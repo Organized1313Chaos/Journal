@@ -1,3 +1,5 @@
+- To know the ubuntu version: `lsb_release -a`
+
 - `nano new_file_name`
   creates a new file if it doesn't exist else opens a file with given name.
 - `ctrl+ o` to rename the file
@@ -29,3 +31,5 @@
 - **Download and Installation**
   - `sudo apt-get install vlc`
 
+- **tcp Ports**
+- `fuser -k 8000/tcp` --> `To kill a 8000 port`
