@@ -1,0 +1,2 @@
+- All good binary search problems:
+  - Link: [Binary Search](https://leetcode.com/problems/minimum-time-to-complete-trips/solutions/3266855/all-binary-search-problems/)
