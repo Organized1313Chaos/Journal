@@ -12,6 +12,7 @@ Solution Link:
 '''
 Approach 1: Failed Approach, Brute force 
 Paradigm: 
+tags: 
 - Sort based on values, and append the index if necessary 
 No of Test Cases Passed: 8/58
 '''
